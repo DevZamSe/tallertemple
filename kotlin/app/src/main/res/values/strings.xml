@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Android\nKotlin</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="navegar">Navegar</string>
+    <string name="fragment">Fragmento información</string>
+    <string name="share">Compartir</string>
+    <string name="mensaje">Escribe tu mensaje aquí</string>
+</resources>
