@@ -6,4 +6,6 @@
     <string name="fragment">Fragmento información</string>
     <string name="share">Compartir</string>
     <string name="mensaje">Escribe tu mensaje aquí</string>
+
+    <string name="dialogo_texto">Este es el dialogo para el texto</string>
 </resources>

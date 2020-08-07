@@ -1,11 +1,13 @@
 package com.devzamse.android.kotlin_temple.view.menu
 
+import android.app.Dialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 
 import com.devzamse.android.kotlin_temple.R
@@ -20,6 +22,7 @@ class inicio : Fragment() {
     private lateinit var buton: Button
     private lateinit var textView: TextView
     private lateinit var animacion: Button
+    private lateinit var dialog: Dialog
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?): View? {
@@ -31,8 +34,25 @@ class inicio : Fragment() {
         animacion = view.findViewById(R.id.animacion)
 
         ClickFunction()
+        inflarDialog()
 
         return view
+    }
+
+    private fun inflarDialog() {
+        dialog = Dialog(activity!!)
+        dialog.setContentView(R.layout.dialog_question)
+        dialog.setCancelable(false)
+        dialog.show()
+
+        var a: EditText = dialog.findViewById(R.id.editText)
+        var b: Button = dialog.findViewById(R.id.button)
+
+        b.setOnClickListener{
+            textView.text = a.text.toString()
+            dialog.dismiss()
+        }
+
     }
 
     private fun ClickFunction() {
